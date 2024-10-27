@@ -1,0 +1,559 @@
+@import url("https://f...content-available-to-author-only...s.com/css2?family=Arima:wght@100..700&family=Nerko+One&display=swap");
+ 
+:root {
+  --primary-color: #99e48a; /* Primary button color */
+  --primary-hover: #358d7c; /* Hover color */
+  --background-color: #fedada; /* Main background color */
+  --secondary-color: rgba(252, 240, 226, 255); /* Secondary background color */
+  --nav-background: rgba(252, 240, 226, 255); /* Navigation background */
+  --text-color: #ff6c70; /* Primary text color */
+  --secondary-text: #20564c; /* Secondary text color */
+  --card-background: #fff; /* Card background color */
+  --card-hover: #358d7c; /* Card hover color */
+  --link-hover: #358d7c; /* Link hover color */
+  --footer-background: #333; /* Footer background */
+  --footer-text: #358d7c; /* Footer text color */
+  --border-color: rgba(204, 204, 204, 0.1); /* Border color */
+}
+ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+}
+i a{ 
+   width: 20px;
+  color: #99e48a;
+}
+i:hover {
+  color: #e4eceb;
+}
+nav {
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to bottom, #fcf0e2, #fedada);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0; 
+  z-index: 3;
+}
+ 
+nav .logo {
+  font-family: "Nerko One", serif;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  align-items: center;
+  color: var(--footer-text);
+  font-size: 50px;
+}
+ 
+nav ul {
+  display: flex;
+  list-style-type: none;
+  flex: 1; 
+  flex-wrap: wrap;
+}
+ 
+nav ul li a {
+  font-family: "Arima", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  display: inline-block;
+  padding: 5px 10px;
+  color: var(--footer-text);
+  text-decoration: none;
+  margin-right: 18px;
+}
+ 
+nav ul li a:hover {
+  cursor: pointer;
+  color: rgb(92, 79, 79);
+}
+ 
+nav ul li a:active {
+  background-color: #358d7c;
+  border-radius: 20px;
+}
+ 
+main {
+  padding: 32px;
+}
+ 
+main h1 {
+  font-family: "Nerko One", serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 3rem;
+  margin-bottom: 16px;
+  color: var(--text-color);
+  line-height: 45px;
+}
+ 
+main p {
+  font-family: "Arima", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  padding-right: 80px;
+  color: #20564c;
+}
+ 
+.profile-image {
+  position: relative;
+  width: 300px;
+  height: 550px;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+ 
+.profile-image:hover {
+  transform: scale(1.05) translate(10px, -10px);
+}
+ 
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-out;
+}
+ 
+.profile-image:hover img {
+  transform: scale(1.1);
+}
+ 
+main i {
+  font-size: 20px;
+}
+ 
+.about {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(to top, #fcf0e2, #fedada);
+  border-radius: 8px;
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+  margin-bottom: 40px;
+}
+ 
+.about h1 {
+  font-family: "Nerko One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2.6rem;
+  color: var(--text-color);
+}
+ 
+.about p {
+  font-family: "Arima", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+  font-size: 1.2rem;
+  color: var(--secondary-text);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+ 
+.coding {
+  margin: 20px 0;
+}
+ 
+.coding-link {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+ 
+.coding-link:hover {
+  text-decoration: underline;
+  color: var(--link-hover);
+}
+ 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; 
+}
+ 
+.butn {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+ 
+button {
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+ 
+.contact-button:hover {
+  background-color: #fedada;
+}
+.resume-button:hover {
+  background-color: #fedada;
+}
+ 
+.resume-button,
+.contact-button {
+  font-family: "Nerko One", serif;
+  border-radius: 10px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color: var(--secondary-text);
+  background-color: #ff6c70;
+}
+ 
+.education {
+  width: 100%;
+  padding: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+ 
+.skill {
+  width: 100%;
+  padding: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+ 
+.edu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+ 
+.softskill,
+.technical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+ 
+.edu p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: var(--secondary-text);
+}
+.des p {
+  font-family: "Arima", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+.years {
+  font-family: "Nerko One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: bold;
+  color: var(--text-color);
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  transform: rotate(-180deg);
+  border-left: 1px solid var(--border-color);
+  transition: border-color 0.3s ease;
+}
+ 
+.years:hover {
+  border-left: 1px solid rgba(204, 204, 204, 1);
+}
+ 
+.years h1 {
+  font-size: 40px;
+}
+.softskill ul li {
+  font-family: "Arima", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 650;
+  font-style: normal;
+  font-size: 1.1rem;
+  color: var(--secondary-text);
+}
+.technical ul li {
+  font-family: "Arima", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 650;
+  font-style: normal;
+  font-size: 1rem;
+  color: var(--secondary-text);
+}
+ 
+.experience {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+ 
+.exp {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+ 
+.year {
+  font-family: "Nerko One", serif;
+  font-weight: 400;
+  font-style: normal;
+  flex: 0 0 100px;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+ 
+.textt {
+  flex: 1;
+  padding-left: 20px;
+}
+ 
+.textt h2 {
+  font-family: "Nerko One", serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 10px 0 5px;
+  font-size: 25px;
+  color: #358d7c;
+}
+ 
+.textt p {
+  font-family: "Arima", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+  margin: 5px 0;
+  line-height: 1.5;
+  color: var(--secondary-text);
+}
+ 
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px;
+}
+ 
+.card {
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  height: 220px;
+  text-align: center;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+ 
+.card:hover {
+  transform: scale(1.1);
+  background-color: var(--card-hover);
+  cursor: pointer;
+}
+ 
+.card h1 {
+  font-family: "Nerko One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: var(--text-color);
+}
+.card p:hover {
+  color: white;
+}
+.card p {
+  font-family: "Arima", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+  color: var(--secondary-text);
+  margin: 5px 0;
+}
+ 
+.card .description {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  opacity: 0;
+}
+ 
+.description i {
+  font-size: 24px;
+  color: var(--link-color);
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+ 
+.description i:hover {
+  color: #000;
+}
+ 
+.card:hover .description {
+  opacity: 1;
+}
+ 
+
+ 
+.contact {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 32px 0;
+  gap: 20px;
+}
+ 
+.contact-info,
+.message-form {
+  width: 100%;
+  max-width: 500px;
+  padding: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 16px;
+  background-color: var(--card-background);
+}
+ 
+.contact-info h2,
+.message-form h2 {
+  font-family: "Nerko One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  margin-bottom: 16px;
+  color: var(--card-hover);
+}
+.contact-info p {
+  color: var(--text-color);
+  font-family: "Arima", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.info-item h3 {
+  color: var(--card-hover);
+  font-family: "Nerko One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+ 
+input,
+textarea {
+  font-family: "Arima", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  width: 100%;
+}
+ 
+button {
+    font-family: "Nerko One", serif;
+    font-weight: 400;
+    font-style: normal;
+  background-color: var(--text-color);
+  color: var(--secondary-text);
+  padding: 12px;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+ 
+button:hover {
+  background-color: var(--background-color);
+}
+ 
+.footer {
+  background-color: var(--footer-background);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+.footer-content p{
+    font-family: "Nerko One", serif;
+    font-weight: 400;
+    font-style: normal;
+ 
+}
+ 
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+ 
+.footer p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+ 
+.socials {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+ 
+.socials li {
+  margin: 0 10px;
+}
+ 
+.socials i {
+  color: var(--footer-text);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+ 
+.socials i:hover {
+  color: var(--link-color);
+} 
+@media (max-width: 530px) {
+    nav {
+      flex-direction: column;
+    } 
+    nav .logo{
+        font-size: 30px;
+    }  
+    nav ul{
+        display: flex;
+    }
+    nav ul li a{ 
+        display: flex;
+        padding: 2.5px 5px; 
+        flex: 1;
+    }
+  }
